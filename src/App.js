@@ -1,25 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import Text from './components/TestChart/textChart'
+import ChartCustomized from './components/ChartCustomized/ChartCustomized'
+import CheckupPage from './pages/Checkup/Checkup.tsx'
+import Company, { TypeCompany } from './types/types'
 
 function App() {
+  const company = {id: 325, dateFrom: new Date(2011,5,1), dateTo: new Date(2021,6,1), type: TypeCompany.cycle}
+
   return (
     <div className="App">
-      <Text/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CheckupPage company={company}  />
+      <ChartCustomized/>
+      
     </div>
   );
 }

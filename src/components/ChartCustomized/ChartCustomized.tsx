@@ -1,6 +1,6 @@
 import Chart from 'chart.js/auto';
 import dateFormat from 'dateformat';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import "./ChartCustomized.css"
 
 
@@ -9,14 +9,13 @@ import "./ChartCustomized.css"
      * @param aspectRatio - for width/height chart
      * @param color - color for line
      */
-const ChartCustomized = (params) => {
-  const labels = [];
+const ChartCustomized = (params: any) => {
+  const labels: any = [];
   let date = new Date(2021, 5, 1);
   console.log(date);
   useEffect(() => {
 
-    dateFormat.i18n = {
-      monthNames: [
+    dateFormat.i18n.monthNames =  [
         "Янв",
         "Фев",
         "Мар",
@@ -29,8 +28,7 @@ const ChartCustomized = (params) => {
         "Окт",
         "Ноя",
         "Дек"
-      ],
-    }
+      ]
     for (let i = 1; i < 50; i++) {
       labels.push({
         x: dateFormat( new Date().setDate(date.getDate() + i), 'dd-mm'),
@@ -73,7 +71,7 @@ const ChartCustomized = (params) => {
                 family: 'Gilroy',
                 size: 14
               },
-              callback: function (value, index, values) {
+              callback: function (value: number) {
                 return new Intl.NumberFormat('ru-RU').format(value);
               }
             }
@@ -143,12 +141,12 @@ const ChartCustomized = (params) => {
             // xAlign: 0,
             yAlign: 'bottom',
             callbacks: {
-              label: function (context) {
+              label: function (context: any) {
                 // console.log(context);
                 // console.log(context.parsed.y);
                 return new Intl.NumberFormat('ru-RU').format(context.parsed.y);
               },
-              title:  function(context) {
+              title:  function(context: any) {
                 console.log(context);
                 return context[0].raw.tooltip;
               
@@ -175,7 +173,10 @@ const ChartCustomized = (params) => {
     });
   }, []);
 
-  return (<div className="wrapper-canvas"><canvas id="myChart" ></canvas></div>);
+  return (
+    <div className="wrapper-canvas">
+    <canvas id="myChart" / >
+    </div>);
 
 }
 

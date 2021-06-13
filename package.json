@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^12.1.10",
     "chart.js": "^3.3.2",
     "dateformat": "^4.5.1",
+    "node-sass": "^6.0.0",
     "react": "^17.0.2",
     "react-chartjs-2": "^3.0.3",
     "react-dom": "^17.0.2",
@@ -41,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/dateformat": "^3.0.1",
+    "@types/react": "^17.0.11"
   }
 }
