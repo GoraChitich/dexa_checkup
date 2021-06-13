@@ -1,45 +1,141 @@
 @font-face {
-    font-family: 'Gilroy';
+    font-family: "Gilroy";
     src: url(../../assets/fonts/Gilroy-Light.otf);
-  }
+}
 
-.checkup-c{
-    .header{
-        background: #E5E5E5;
-        height: 160px;
+.checkup-c {
+    font-family: Gilroy;
+    .header {
+        background: #e5e5e5;
+        // height: 160px;
         display: flex;
-        .company{
+        justify-content: space-between;
+        .company {
             margin-top: 24px;
             margin-left: 57px;
-            font-family: Gilroy;
             display: flex;
             flex-direction: column;
             justify-content: left;
 
-            .title{
+            .title {
                 color: rgba(2, 119, 189, 1);
                 font-weight: 600;
-                font-size: 28px;    
+                font-size: 28px;
             }
-            .type{
+            .type {
                 // font-weight: 500;
                 font-size: 16px;
                 color: rgba(94, 99, 102, 1);
                 display: flex;
                 margin-top: 4px;
+
+                .text{
+                    margin-left: 13px;
+                }
+                
             }
-            .date{
+            .date {
                 font-size: 13px;
                 color: rgba(94, 99, 102, 1);
                 margin-top: 15px;
             }
-            .settings{
+            .settings {
                 margin-top: 12px;
                 font-size: 13px;
+                a{
+                    color: rgba(68, 138, 255, 1);
+                    text-decoration: none;
+                }
+            }
 
+            .settings-details{
+                font-size: 14px;
+                font-weight: 400;
+                margin-bottom: 14px;
+                line-height: 16px;
+                letter-spacing: 0.15px;
+                .columns{
+                    display: flex;
+                    div{
+                        width: 210px;
+                        div{
+                            margin-bottom: 6px;
+                            span{
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
-                color:rgba(68, 138, 255, 1)
+        .right {
+            // margin: 0 auto;
+            margin: 33px 60px 0 0;
 
+            .buttons {
+                display: flex;
+            }
+                .btn {
+                    color: rgba(255, 255, 255, 1);
+                    border-radius: 4px;
+                    width: 48px;
+                    height: 44px;
+                    border: 0;
+                    margin-left: 12px;
+                    span {
+                        display: block;
+                        margin-left: 17px;
+                    }
+                }
+            
+
+            .start {
+                width: 151px;
+                background-color: rgba(0, 200, 83, 1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .stop {
+                width: 186px;
+                background-color: rgba(255, 167, 38, 1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .edit {
+                background-color: rgba(3, 155, 229, 1);
+            }
+
+            .add {
+                width: 48px;
+                background-color: rgba(227, 242, 253, 1);
+            }
+
+            .text {
+                font-size: 16px;
+                text-align: right;
+                margin-bottom: 12px;
+            }
+
+            .active {
+                color: rgba(67, 160, 71, 1);
+            }
+
+            .stopped {
+                color: rgba(120, 144, 156, 1);
+            }
+        }
+        .settings {
+            margin-bottom: 20px;
+            hr {
+                width: 350px;
+                height: 0px;
+                border: 1px solid #eeeeee;
+            }
+            div {
+                display: flex;
             }
         }
     }

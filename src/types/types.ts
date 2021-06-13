@@ -4,16 +4,17 @@ export type Company = {
     dateFrom: Date;
     dateTo: Date;
     status: StatusCompany;
+    countOutputs: number;
+    lengthBlock: number;
+
 }
 
 export enum StatusCompany{
-    new,
-    work,
-    stopped,
-    closed
+    working,
+    stopped
 }
 
 
 export enum TypeCompany{
-    cycle= "циклический тип"
+    cycle= "Циклический тип"
 }
